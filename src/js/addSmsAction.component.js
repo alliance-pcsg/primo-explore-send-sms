@@ -8,12 +8,12 @@ angular.module('sendSms').component('addSmsAction', {
       let ctrl = this.prmActionCtrl
       let svc = ctrl.actionListService
       let index = Object.keys(svc.requiredActionsList).length
+      // register icon
+      ctrl.actionLabelNamesMap[action.name] = action.label
+      ctrl.actionIconNamesMap[action.name] = action.name
+      ctrl.actionIcons[action.name] = action.icon
+      // add action
       if (!svc.actionsToIndex[action.name]) { // don't add twice
-        // register icon
-        ctrl.actionLabelNamesMap[action.name] = action.label
-        ctrl.actionIconNamesMap[action.name] = action.name
-        ctrl.actionIcons[action.name] = action.icon
-        // add action
         svc.requiredActionsList[index] = action.name
         svc.actionsToDisplay.unshift(action.name)
         svc.actionsToIndex[action.name] = index
