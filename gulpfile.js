@@ -4,20 +4,23 @@ const babel = require('gulp-babel')
 const lint = require('gulp-eslint')
 const minify = require('gulp-uglify')
 
-gulp.task('lint', () => {
-  gulp.src('src/**/*.js')
+gulp.task('lint', function() {
+  return gulp.src('src/**/*.js')
     .pipe(lint())
     .pipe(lint.format())
+    .pipe(lint.failOnError())
 })
 
-gulp.task('build', () => {
-  gulp.src(['src/main.js', 'src/js/*.js'])
-    .pipe(babel())
+gulp.task('build', ['lint'], function() {
+  return gulp.src(['src/main.js', 'src/js/*.js'])
     .pipe(concat('module.js'))
+    .pipe(babel())
     .pipe(minify())
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('watch', () => gulp.watch('src/**/*.js', ['lint', 'build']))
+gulp.task('watch', function() {
+  return gulp.watch('src/**/*.js', ['build'])
+})
 
 gulp.task('default', ['watch'])
