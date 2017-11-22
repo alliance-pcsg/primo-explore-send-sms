@@ -1,1 +1,1 @@
-angular.module('sendSms', ['ngMaterial'])
+angular.module('sendSms', ['ngMaterial', 'primo-explore.components'])
