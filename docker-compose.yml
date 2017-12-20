@@ -1,11 +1,18 @@
-version: '3.1'
+version: '3.4'
 
 services:
 
   devenv:
-    image: budak/primo-explore-devenv
+    image: alliance/oca-devenv-docker
     ports:
       - 8003:8003
     volumes:
-      - ./test/bootstrap.js:/home/node/primo-explore-devenv/primo-explore/custom/TEST/js/bootstrap.js
-      - ./dist/module.js:/home/node/primo-explore-devenv/primo-explore/custom/TEST/js/module.js
+      - type: bind
+        source: ./test/bootstrap.js
+        target: /home/node/primo-explore-devenv/primo-explore/custom/ALLIANCE/js/bootstrap.js
+      - type: bind
+        source: ./dist/module.js
+        target: /home/node/primo-explore-devenv/primo-explore/custom/ALLIANCE/js/module.js
+      - type: bind
+        source: ./node_modules/primo-explore-custom-actions/dist/module.js
+        target: /home/node/primo-explore-devenv/primo-explore/custom/ALLIANCE/js/pece.js

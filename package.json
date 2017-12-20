@@ -46,5 +46,8 @@
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.31"
+  },
+  "dependencies": {
+    "primo-explore-custom-actions": "^3.0.0"
   }
 }
