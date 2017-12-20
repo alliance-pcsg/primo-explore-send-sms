@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const concat = require('gulp-concat')
 const babel = require('gulp-babel')
 const lint = require('gulp-eslint')
-const minify = require('gulp-uglify')
+// const minify = require('gulp-uglify')
 
 gulp.task('lint', function() {
   return gulp.src('src/**/*.js')
@@ -15,7 +15,7 @@ gulp.task('build', ['lint'], function() {
   return gulp.src(['src/main.js', 'src/js/*.js'])
     .pipe(concat('module.js'))
     .pipe(babel())
-    .pipe(minify())
+    // .pipe(minify())
     .pipe(gulp.dest('dist'))
 })
 
