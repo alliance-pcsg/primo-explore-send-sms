@@ -1,6 +1,7 @@
 # primo-explore-send-sms
 
 [![npm version](https://img.shields.io/npm/v/primo-explore-send-sms.svg)](https://www.npmjs.com/package/primo-explore-send-sms)
+[![Build Status](https://travis-ci.org/alliance-pcsg/primo-explore-send-sms.svg?branch=master)](https://travis-ci.org/alliance-pcsg/primo-explore-send-sms)
 
 ## Features
 Adds an "SMS" action to the actions menu that opens a form for the user to send themselves a text message with item details. Uses Primo's email API to send item details to carrier SMS gateways to convert them to text messages.
