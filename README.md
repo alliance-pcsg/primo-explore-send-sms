@@ -60,7 +60,7 @@ You can see the default options for both properties by looking at `src/js/smsOpt
 The example below activates the customization and changes the action label to 'Text Me'. It also moves the action to the left side of the list, and shortens the list of available SMS carriers.
 
 ```js
-var app = angular.module('viewCustom', ['customActions'])
+var app = angular.module('viewCustom', ['sendSms'])
 
 app.component('prmActionListAfter', {template: '<sms-action />'})
 
