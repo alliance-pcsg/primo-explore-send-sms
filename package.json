@@ -1,6 +1,6 @@
 {
   "name": "@orbis-cascade/primo-explore-send-sms",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "enables users to send text messages with item call numbers in primo-explore.",
   "main": "index.js",
   "scripts": {},
