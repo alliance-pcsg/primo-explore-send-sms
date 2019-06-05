@@ -1,7 +1,3 @@
-'use strict';
-
-angular.module('sendSms', ['ngMaterial', 'primo-explore.components', 'customActions']);
-
 /* eslint-disable max-len */
 angular.module('sendSms').component('ocaSendSms', {
   bindings: {
